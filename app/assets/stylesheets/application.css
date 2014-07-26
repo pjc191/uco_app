@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+	color: white;
+}
+
+p {
+	font-size: 18px;
+}
+
+.subtitles {
+	color: white;
+}
+
+ /* AFTER CORE BOOTSTRAP CSS*/
+
+body { 
+	background-color: black;
+	padding-top: 60px; 
+}
