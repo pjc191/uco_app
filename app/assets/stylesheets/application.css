@@ -14,8 +14,17 @@
  *= require_self
  */
 
+h2, h3, h4, h5, h6 {
+    font-family: 'Your Font';
+}
+p, div {
+    font-family: 'Your Font';
+}
+
 h1 {
 	color: white;
+	font-family: 'Monofett', cursive;
+	font-size: 100px;
 }
 
 p {
@@ -26,6 +35,30 @@ p {
 	color: white;
 }
 
+.monoton {
+	font-family: 'Monoton', cursive;
+	font-size: 50px;
+}
+
+.art {
+	color: red;
+}
+
+.science {
+	color: orange;
+}
+
+.technology {
+	color: green;
+}
+
+.philosophy {
+	color: blue;
+}
+
+.religion {
+	color: purple;
+}
  /* AFTER CORE BOOTSTRAP CSS*/
 
 body { 

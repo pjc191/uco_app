@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  influencee: MyString
+  influencee_year: 1
+  influencer: MyString
+  influencer_year: 1
+  description: MyString
+
+two:
+  influencee: MyString
+  influencee_year: 1
+  influencer: MyString
+  influencer_year: 1
+  description: MyString
