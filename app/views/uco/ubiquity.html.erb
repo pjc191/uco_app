@@ -2,7 +2,8 @@
 
 <ul>
 	<%= @influence_stream.each do |x| %>
-		<li> <%= x.description %> </li>
+		<li> <%= x.influencee_artist_id.inspect %> <%= x.influencer_artist_id.inspect %> <%= x.description %> </li>
 		<br>
 	<% end %>
 </ul>
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140730220950) do
+ActiveRecord::Schema.define(version: 20140731200337) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 20140730220950) do
   end
 
   create_table "drafts", force: true do |t|
-    t.string   "influencee"
+    t.integer  "influencee_artist_id", limit: 255
     t.integer  "influencee_year"
-    t.string   "influencer"
+    t.integer  "influencer_artist_id", limit: 255
     t.integer  "influencer_year"
     t.string   "description"
     t.datetime "created_at"
