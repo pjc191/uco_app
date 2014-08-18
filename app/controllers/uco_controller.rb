@@ -5,7 +5,7 @@ class UcoController < ApplicationController
 
 	def ubiquity
 
-		@influence_stream = Draft.all
+		@influence_stream = Individual.all
 
 	end
 

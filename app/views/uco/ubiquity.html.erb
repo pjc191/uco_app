@@ -1,9 +1,25 @@
-<h3> Artists </h3>
+<h3> Individuals </h3>
 
+<!--
 <ul>
 	<%= @influence_stream.each do |x| %>
-		<li> <%= x.influencee_artist_id.inspect %> <%= x.influencer_artist_id.inspect %> <%= x.description %> </li>
+		<li> <%= x.name %> <%= x.occupation %> <%= x.ancestry %> </li>
 		<br>
 	<% end %>
 </ul>
+-->
 
+<ul>
+	<% Individual.roots.each do |root| %>
+		<div class=<%= root.name %>>
+			<% root.children.each do |influence| %>
+				<div class=<%=influence.name%>> 
+					<strong>Name: <%= influence.name %></strong>, 
+					<li> Occupation: <i><%= influence.occupation %>,</li> 
+					<li> Ancestry: <%= influence.ancestry %></li> 
+					<li> Parent Name: <%= influence.parent.name %></li></i><br>
+				</div>
+			<% end %>
+		</div>
+	<% end %>
+</ul>

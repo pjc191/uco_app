@@ -55,6 +55,27 @@ Draft.create(influencee_artist_id: 1, influencee_year: 2004, influencer_artist_i
 Draft.create(influencee_artist_id: 1, influencee_year: 2004, influencer_artist_id: 22, influencer_year: 1976, description: "'Last Call' contains samples of 'Mr. Rockefeller' performed by Bette Midler")
 Draft.create(influencee_artist_id: 1, influencee_year: 2004, influencer_artist_id: 23, influencer_year: 1970, description: "'Last Call' contains samples of 'She's Gone to Another' by The Whatnauts")
 
+#root = Individual.create! :name => 'George Lucas'
+
+root = Individual.create(name: "George Lucas", occupation: "Writer, Director")
+#Individual.create(name: "John Williams", occupation: "Composer")
+#Individual.create(name: "Mark Hamill", occupation: "Actor")
+#Individual.create(name: "Harrison Ford", occupation: "Actor")
+Individual.create(name: "Stanley Kubrick", occupation: "Director", parent: root)
+Individual.create(name: "Joseph Campbell", occupation: "Writer, Mythologist", parent: root)
+Individual.create(name: "Frederick Stephani", occupation: "Writer, Director", parent: root)
+Individual.create(name: "Fred M. Wilcox", occupation: "Director", parent: root)
+Individual.create(name: "Fritz Lang", occupation: "Director", parent: root)
+Individual.create(name: "John Schoenherr", occupation: "Illustrator", parent: root)
+Individual.create(name: "George R.R. Martin", occupation: "Writer", parent: root)
+
+
+
+
+
+
+
+
 
 
 
