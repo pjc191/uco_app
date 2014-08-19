@@ -62,9 +62,13 @@
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-success">Sign Up</a></button> | <button type="submit" class="btn btn-primary">Log In</a></button>
-            </form>
-          <% end %>
+            <!--<button type="submit" class="btn btn-success">Sign Up</a></button> 
+            <button type="submit" class="btn btn-primary">Log In</a></button>-->
+            <%= button_to 'Login', '/login', :class => "btn btn-primary", :type => "submit" %> |
+            <%= button_to 'Signup', '/signup', :class => "btn btn-success", :method => :get, :type => "submit" %>
+          <% end %> 
+        </form>
+    
 
       
           
