@@ -51,27 +51,36 @@
           </ul>
         </li> -->
       </ul>
+<!-- added these lines. -->
       <form class="navbar-form navbar-right" role="search">
-      	<div class="form-group">
-          <input type="text" class="form-control" placeholder="Username">
-        </div>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-success">Sign Up</button>
-        <button type="submit" class="btn btn-primary">Log In</button>
-      </form>
+          <% if current_user %>
+            Signed in as <%= current_user.name %> | <button type="submit" class="btn btn-danger"><a href="/logout">Log Out</a></button>
+          <% else %>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-success">Sign Up</a></button> | <button type="submit" class="btn btn-primary">Log In</a></button>
+            </form>
+          <% end %>
+
+      
+          
+
      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-<!-- added these lines. -->
+<!-- added these lines. 
 <% if current_user %>
   Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
 <% else %>
   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
+<% end %> 
+-->
 
 <%= yield %>
 
