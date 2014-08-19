@@ -42,3 +42,4 @@ gem 'ancestry'
 
 gem 'rovi'
 
+gem 'httparty'
