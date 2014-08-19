@@ -9,4 +9,8 @@ class UcoController < ApplicationController
 
 	end
 
+	def search
+		query = params['query'].gsub(' ', '+')
+	end
+
 end
