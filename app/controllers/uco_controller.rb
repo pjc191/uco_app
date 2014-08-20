@@ -1,21 +1,21 @@
 class UcoController < ApplicationController
 
-	def home
-	end
+  def home
+  end
 
-	def ubiquity
+  def ubiquity
+    @influence_stream = Individual.all
+  end
 
-		@influence_stream = Individual.all
+  def search
+    api_key = 'nzrpvthcwvpa9k8yhmj8kyv9'
+    shared_secret = 'p7ZgBkeWyH'
+    timestamp = Time.now.to_i.to_s
+    sig = Digest::MD5.hexdigest(api_key + shared_secret + timestamp)
 
-	end
-
-	def search
-		name = params['name'].gsub(' ', '+')
-		apikey = params['nzrpvthcwvpa9k8yhmj8kyv9']
-		sig = params['07219107c724c682efb52aabf03e376f']
-
-		url = "http://api.rovicorp.com/data/v1.1/name/influencers?apikey=#{apikey}&sig=#{sig}&name=#{name}"
-		@response = HTTParty.get( url )
-	end
+    query = params['query'].gsub(' ', '+')
+    @response = HTTParty.get('http://api.rovicorp.com/data/v1/name/influencers', api_key: api_key, sig: sig, name: query)
+    puts @response
+  end
 
 end

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-require 'digest/md5'
+  require 'digest/md5'
   api_key = 'nzrpvthcwvpa9k8yhmj8kyv9'
   shared_secret = 'p7ZgBkeWyH'
   timestamp = Time.now.to_i.to_s
@@ -11,7 +11,6 @@ require 'digest/md5'
 
   #echo SigGen::getResult()."\n";
 #for Rovi API
-require 'httparty'
 
 #require_relative 'rovi/api'
 #require_relative 'rovi/json_response'
