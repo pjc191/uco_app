@@ -1,11 +1,15 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+</head>
+
 <h1>Signup!</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
 
-  Username: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %> (used only if you ever forget your password)
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
+  Username: <%= f.text_field :name %><br>
+  Email: <%= f.text_field :email %> (used only if you ever forget your password)<br>
+  Password: <%= f.password_field :password %><br>
+  Password Confirmation: <%= f.password_field :password_confirmation %><br>
   <%= f.submit "Submit" %>
 
 <% end %>

@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   root to: 'uco#home'
 
   get '/ubiquity' => 'uco#ubiquity'
-  get '/search' => 'uco#search'
+  get '/utopia' => 'uco#utopia'
+  get '/search_inf' => 'uco#search_inf'
+  get '/search_fol' => 'uco#search_fol'
+
 
   # these routes are for showing users a login form, logging them in, and logging them out.
   get '/login' => 'sessions#new'

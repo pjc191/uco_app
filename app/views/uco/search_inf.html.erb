@@ -1,0 +1,16 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+</head>
+
+<!--<%= @query %>-->
+<!-- <%= @url_influencers %>-->
+<br>
+
+<% if @response_influencers %>
+	<% @response_influencers.each do |influence| %>
+		<ul>
+			<li><h2 font-family="VT323"><%= influence['name']%></h2></li>
+			<li><img src="<%= influence['thumbnail'] %>" alt="thumbnail">
+		</ul>
+	<% end %>
+<% end %>

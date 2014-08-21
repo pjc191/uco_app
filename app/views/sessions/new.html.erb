@@ -1,9 +1,13 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+</head>
+
 <h1>Login</h1>
 
 <%= form_tag '/login' do %>
 
-  Username: <%= text_field_tag :name %>
-  Password: <%= password_field_tag :password %>
+  Username: <%= text_field_tag :name %><br>
+  Password: <%= password_field_tag :password %><br>
   <%= submit_tag "Submit" %>
 
 <% end %>

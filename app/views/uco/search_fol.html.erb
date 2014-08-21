@@ -1,0 +1,11 @@
+<!--<%= @url_followers %>-->
+
+
+<% if @response_followers %>
+	<% @response_followers.each do |follower| %>
+		<ul>
+			<li><h2><%= follower['name']%></h2></li>
+			<!--<li><img src="<%= follower['thumbnail'] %>" alt="thumbnail">-->
+		</ul>
+	<% end %>
+<% end %>

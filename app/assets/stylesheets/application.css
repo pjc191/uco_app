@@ -14,7 +14,11 @@
  *= require_self
  */
 
-h2, h3, h4, h5, h6 {
+h2 {
+	font-family: 'VT323', ;
+}
+
+h3, h4, h5, h6 {
     font-family: 'Your Font';
 }
 p, div {
@@ -23,7 +27,7 @@ p, div {
 
 h1 {
 	color: white;
-	font-family: 'Monofett', cursive;
+	/*font-family: 'Monofett', cursive;*/
 	font-size: 100px;
 }
 
