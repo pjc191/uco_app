@@ -14,7 +14,10 @@ class UcoController < ApplicationController
     sig = Digest::MD5.hexdigest(api_key + shared_secret + timestamp)
 
     query = params['query'].gsub(' ', '+')
-    @response = HTTParty.get('http://api.rovicorp.com/data/v1/name/influencers', api_key: api_key, sig: sig, name: query)
+    url = "http://api.rovicorp.com/data/v1/name/influencers?api_key=#{api_key}&sig=#{sig}&name=#{query}"
+    @response = HTTParty.get( url )
+    
+    #puts @query
     puts @response
   end
 
